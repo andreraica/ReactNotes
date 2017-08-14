@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import './Notes.css';
-import Note from './Note'
+import './style/Notes.css';
+import Note from './components/Note'
+import { Link } from 'react-router-dom'
 
 class App extends Component {
  
@@ -35,6 +36,12 @@ class App extends Component {
   render() {
     return (
       <div>
+        <p>
+          <ul>
+            <li><Link to='/'>Notas</Link></li>
+            <li><Link to='/about'>Sobre</Link></li>
+          </ul>
+        </p>
         <p>
           <input type="text" id="note" onChange={this.setNote} /> 
           <input type="button" id="btnAdd" value="Add" onClick={this.addNote}/> 
